@@ -1,20 +1,122 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+
 ---
 
-<Layout title="Superfood | Home">
-	<main>
-		<h1 class="text-2xl text-slate-100">
-			Hola Mundo
-		</h1>
-		
-		<h1 class="text-zinc-100 text-2xl">Smootie de Avena y Frutos Rojos</h1>
-		<h1 class="text-zinc-100 text-2xl">Cinnamon Apple Muffin</h1>
-	</Layout>
-	</main>
+<Layout title="Receta de Pancake de Avena y Mango">
+	<header class="">
+		<img src="/super-food-banner.webp" alt="">
+	</header>
+    <main class="mx-6 text-zinc-200">
+        <h1 class="mt-6 mb-2 text-2xl font-bold">Pancake de Avena y Mango</h1>
+        <p>
+            Deliciosas pancakes de avena y mango, una mezcla perfecta de frescura tropical y salud. Rápidas de preparar, ideales para un desayuno energizante y nutritivo. ¡Perfectas para comenzar el día! 
+        </p>
+
+        <img src="/img-default.jpg" alt="Imagen de la receta de Pancake de Avena y Mango" class="w-full mt-6 rounded-md">
+        
+        <article class="mt-6 p-2 rounded-md bg-gray-800">
+            <h2 class="mb-4 text-lg font-semibold">
+                Ingredientes
+            </h2>
+            <ul class="ingredient-list">
+                <li class="mb-1"><span class="ingredient">Avena molida</span><span class="dots"></span><span class="amount">2 tazas</span></li>
+                <li><span class="ingredient">Mango</span><span class="dots"></span><span class="amount">2 tazas</span></li>
+                <li><span class="ingredient">Leche de almendra</span><span class="dots"></span><span class="amount">1 taza</span></li>
+                <li><span class="ingredient">Agave</span><span class="dots"></span><span class="amount">4 cdas</span></li>
+                <li><span class="ingredient">Polvo de hornear</span><span class="dots"></span><span class="amount">1 cda</span></li>
+                <li><span class="ingredient">Sal</span><span class="dots"></span><span class="amount">&frac14; cda</span></li>
+              </ul>
+        </article>
+
+        <article class="mt-8 p-2 rounded-md bg-gray-800">
+            <h2 class="mb-4 text-lg font-semibold">
+                Instrucciones
+              </h2>
+              <ul>
+                <li class="mb-2 flex gap-2">
+                    <span class="godito">
+                        1
+                    </span>
+                    <p>
+                        Incorporar todos los ingredientes en una licuadora y batir hasta conseguir una mezcla uniforme.
+                    </p>
+                </li>
+                <li class="mb-2 flex gap-2">
+                    <span class="godito">
+                        2
+                    </span>
+                    <p>
+                        Engrasar una sartén ligeramente, luego con una cuchara o scoop agregar la mezcla y cocinar a fuego medio/bajo por 3 minutos de un lado y 3 minutos del otro lado.
+                    </p>
+                </li>
+              </ul>
+        </article>
+
+        <section class="mt-6">
+            <h2 class="mb-4 text-xl font-semibold">
+                Otras Recetas
+            </h2>
+
+            <article class="mb-6 bg-gray-800 rounded-md">
+                <img src="/img-default.jpg" alt="Imagen de la receta de Smootie de Avena y Frutos Rojos" class="rounded-t-md">
+                <h2 class="text-lg font-bold p-3">
+                    Smootie de Avena y Frutos Rojos
+                </h2>
+            </article>
+
+            <article class="bg-gray-800 rounded-md">
+                <img src="/img-default.jpg" alt="Imagen de la receta de Cinnamon Apple Muffin" class="rounded-t-md">
+                <h2 class="text-lg font-bold p-3">
+                    Cinnamon Apple Muffin
+                </h2>
+            </article>
+        </section>
+    </main>
 </Layout>
 
 <style>
-	
+.ingredient-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredient-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient {
+  margin-right: 10px;
+}
+
+.dots {
+  flex-grow: 1;
+  border-bottom: 1px dashed #fff;
+  margin-right: 10px;
+}
+
+.amount {
+  white-space: nowrap;
+}
+
+.godito{
+    margin-top: 4px;
+    padding: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #FF642F;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 </style>
